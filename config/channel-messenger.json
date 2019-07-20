@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../assets/modules/channel-messenger/config.schema.json",
+  "enabled": true,
+  "accessToken": "EAAGBkRbsQVUBAA0zWRpsC5QnVdW41WMEhEBZB7aMOZBtihiSwkDYribZBui5PdMa17jWzPNy5ZBqrh13kdlLzbCBG2DB8NSUT31LAn8CgZCmiucXYJE4XoJW52LiIddtx1fFtDFa5nXBDYRmdfLottjpW9ZBFtR8iK1h0pwvedRof6slunT5gZB",
+  "appSecret": "7634a20ca0db2d764bcc4c4588d81982",
+  "verifyToken": "v9tsrSUb45",
+  "persistentMenu": [
+       
+  ]
+}

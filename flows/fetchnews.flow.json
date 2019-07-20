@@ -1,0 +1,92 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "1de2f907ea",
+      "name": "entry",
+      "onEnter": [
+        "getnews {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-8871"
+        }
+      ]
+    },
+    {
+      "id": "51b28216ff",
+      "name": "node-8871",
+      "next": [
+        {
+          "condition": "true",
+          "node": "node-9ac9"
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"1500\"}"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "aeed74c282",
+      "name": "node-9ac9",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-03e8a2"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_carousel-1SOPWr",
+        "say #!builtin_carousel-8o8ico"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "79ec93328f",
+      "name": "node-15c2",
+      "next": [
+        {
+          "condition": "true",
+          "node": "entry"
+        }
+      ],
+      "onEnter": [
+        "incrementnewsflg {}"
+      ],
+      "onReceive": null
+    },
+    {
+      "id": "skill-03e8a2",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-03e8a2",
+      "flow": "skills/choice-03e8a2.flow.json",
+      "next": [
+        {
+          "caption": "User picked [continue]",
+          "condition": "temp['skill-choice-ret'] == \"continue\"",
+          "node": "node-15c2"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"change\"",
+          "node": "changetopic.flow.json"
+        },
+        {
+          "condition": "temp['skill-choice-ret'] == \"rest\"",
+          "node": "endflow.flow.json"
+        },
+        {
+          "condition": "true",
+          "node": "END"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

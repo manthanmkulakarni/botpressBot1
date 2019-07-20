@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "entry",
+      "position": {
+        "x": 100,
+        "y": 100
+      }
+    },
+    {
+      "id": "skill-ad16d2",
+      "position": {
+        "x": 375,
+        "y": 40
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "entry",
+      "sourcePort": "out0",
+      "target": "skill-ad16d2",
+      "points": [
+        {
+          "x": 307,
+          "y": 246
+        },
+        {
+          "x": 478,
+          "y": 34
+        }
+      ]
+    }
+  ]
+}
